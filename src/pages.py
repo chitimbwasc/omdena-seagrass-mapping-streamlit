@@ -132,15 +132,17 @@ def gallery():
     tab1, tab2 = st.tabs(['Greece','Croatia'])
 
     with tab1:
-        st.image("", caption='Greece image1')
-        st.image("", caption='Greece image1')
-        st.image("", caption='Greece image1')
-        st.image("", caption='Greece image1')
-        st.image("", caption='Greece image1')
+        # st.image("", caption='Greece image1')
+        # st.image("", caption='Greece image1')
+        # st.image("", caption='Greece image1')
+        # st.image("", caption='Greece image1')
+        # st.image("", caption='Greece image1')
+        pass
 
     with tab2:
-        st.image("./model_utils/Croatia_images/image1.JPG", caption='Croatia image1')
-        st.image("./model_utils/Croatia_images/image2.JPG", caption='Croatia image1')
-        st.image("./model_utils/Croatia_images/image3.JPG", caption='Croatia image1')
-        st.image("./model_utils/Croatia_images/image4.JPG", caption='Croatia image1')
-        st.image("./model_utils/Croatia_images/image5.JPG", caption='Croatia image1')
+        # st.image("./model_utils/Croatia_images/image1.JPG", caption='Croatia image1')
+        # st.image("./model_utils/Croatia_images/image2.JPG", caption='Croatia image1')
+        # st.image("./model_utils/Croatia_images/image3.JPG", caption='Croatia image1')
+        # st.image("./model_utils/Croatia_images/image4.JPG", caption='Croatia image1')
+        # st.image("./model_utils/Croatia_images/image5.JPG", caption='Croatia image1')
+        pass
