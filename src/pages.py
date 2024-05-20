@@ -132,11 +132,11 @@ def gallery():
     tab1, tab2 = st.tabs(['Greece','Croatia'])
 
     with tab1:
-        st.image("./model_utils/Greece_images/image1.JPG", caption='Greece image1')
-        st.image("./model_utils/Greece_images/image2.JPG", caption='Greece image1')
-        st.image("./model_utils/Greece_images/image3.JPG", caption='Greece image1')
-        st.image("./model_utils/Greece_images/image4.JPG", caption='Greece image1')
-        st.image("./model_utils/Greece_images/image5.JPG", caption='Greece image1')
+        st.image("", caption='Greece image1')
+        st.image("", caption='Greece image1')
+        st.image("", caption='Greece image1')
+        st.image("", caption='Greece image1')
+        st.image("", caption='Greece image1')
 
     with tab2:
         st.image("./model_utils/Croatia_images/image1.JPG", caption='Croatia image1')
