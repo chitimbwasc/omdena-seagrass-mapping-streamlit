@@ -145,28 +145,20 @@ def gallery():
     tab1, tab2 = st.tabs(['Greece','Croatia'])
 
     with tab1:
-        # st.image("./model_utils/Croatia_images/image1.JPG", caption='Croatia image1')
-        # st.image("./model_utils/Croatia_images/image2.JPG", caption='Croatia image1')
-        # st.image("./model_utils/Croatia_images/image3.JPG", caption='Croatia image1')
-        # st.image("./model_utils/Croatia_images/image4.JPG", caption='Croatia image1')
-        # st.image("./model_utils/Croatia_images/image5.JPG", caption='Croatia image1')
+        st.image("./images/Greece_images/image1.JPG", caption='Greece image1')
+        st.image("./images/Greece_images/image2.JPG", caption='Greece image2')
+        st.image("./images/Greece_images/image3.JPG", caption='Greece image3')
+        st.image("./images/Greece_images/image4.JPG", caption='Greece image4')
+        st.image("./images/Greece_images/image5.JPG", caption='Greece image5')
         
-        # pass
-
-        
-
-        # Print the current working directory
-        st.write("WORK  IN  PROGRESS!")
-
-
     with tab2:
-        
-        current_directory = os.getcwd()
-        folder_path = current_directory + "/src/images/"
-        image_file_names = gallery_display(folder_path)
-        for file_name in image_file_names:
-            show_image(folder_path + file_name)
-            
+        st.image("./images/Croatia_images/image1.JPG", caption='Croatia image1')
+        st.image("./images/Croatia_images/image2.JPG", caption='Croatia image2')
+        st.image("./images/Croatia_images/image3.JPG", caption='Croatia image3')
+        st.image("./images/Croatia_images/image4.JPG", caption='Croatia image4')
+        st.image("./images/Croatia_images/image5.JPG", caption='Croatia image5')
+
+
 def gallery_display(dir_path):
     # Specify the directory path
     directory_path = dir_path
