@@ -174,8 +174,8 @@ def gallery():
         folder_path = current_directory + "/src/images/"
         image_file_names = gallery_display(folder_path)
         for file_name in image_file_names:
-            # show_image(current_directory + "/" + file_name)
-            st.write(folder_path + file_name)
+            show_image(folder_path + file_name)
+            # st.write(folder_path + file_name)
 
 
 def gallery_display(dir_path):
