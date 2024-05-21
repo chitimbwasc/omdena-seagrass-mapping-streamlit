@@ -131,7 +131,7 @@ def show_image(image_path, band_idxs=range(12)):
     img_arr = tiff.imread(image_path)[:, :, band_idxs]
     fig, ax = plt.subplots()
     # ax.plot(img_arr[:, :, 3])
-    ax.imshow(image[:, :, 3])
+    ax.imshow(img_arr[:, :, 3])
     # Display the image in streamlit
     st.pyplot(fig)
             
