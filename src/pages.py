@@ -118,6 +118,15 @@ def repository():
     
     ################### INFORMATION SECTION #######################
 
+# Loading the images & masks as an array
+import tifffile as tiff
+
+def load_image(image_path, band_idxs=range(12)):
+    print(f'image path {image_path}')
+    img_arr = tiff.imread(image_path)[:, :, band_idxs]
+    print(f'image {image_path} loaded')
+    return img_arr
+            
 # Placeholder function
 def gallery():
      ################### HEADER SECTION #######################
@@ -133,10 +142,10 @@ def gallery():
 
     with tab1:
         st.image("./images/Craotia_01_image_0.tif", caption='Greece image1')
-        st.image("./images/Craotia_01_image_1.tif", caption='Greece image1')
-        st.image("./images/Craotia_01_image_10.tif", caption='Greece image1')
-        st.image("./images/Craotia_01_image_100.tif", caption='Greece image1')
-        st.image("./images/Craotia_01_image_101.tif", caption='Greece image1')
+        st.image("./images/Croatia_01_image_1.tif", caption='Greece image1')
+        st.image("./images/Croatia_01_image_10.tif", caption='Greece image1')
+        st.image("./images/Croatia_01_image_100.tif", caption='Greece image1')
+        st.image("./images/Croatia_01_image_101.tif", caption='Greece image1')
         pass
 
     with tab2:
