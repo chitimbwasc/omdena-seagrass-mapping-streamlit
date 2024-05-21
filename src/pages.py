@@ -153,11 +153,10 @@ def gallery():
         
         # pass
 
-        # Get the current working directory
-        current_directory = os.getcwd()
+        
 
         # Print the current working directory
-        st.write("Current Working Directory:", current_directory)
+        st.write("WORK  IN  PROGRESS!")
 
 
     with tab2:
