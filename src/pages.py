@@ -151,7 +151,16 @@ def gallery():
         # st.image("./model_utils/Croatia_images/image4.JPG", caption='Croatia image1')
         # st.image("./model_utils/Croatia_images/image5.JPG", caption='Croatia image1')
         
-        pass
+        # pass
+
+        import os
+
+        # Get the current working directory
+        current_directory = os.getcwd()
+
+        # Print the current working directory
+        print("Current Working Directory:", current_directory)
+
 
     with tab2:
         show_image("./src/images/Croatia_01_image_0.tif")
