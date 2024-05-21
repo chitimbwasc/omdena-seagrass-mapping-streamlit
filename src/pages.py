@@ -159,7 +159,7 @@ def gallery():
         current_directory = os.getcwd()
 
         # Print the current working directory
-        print("Current Working Directory:", current_directory)
+        st.write("Current Working Directory:", current_directory)
 
 
     with tab2:
