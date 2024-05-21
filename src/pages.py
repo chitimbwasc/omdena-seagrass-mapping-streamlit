@@ -151,7 +151,7 @@ def gallery():
         # st.image("./model_utils/Croatia_images/image4.JPG", caption='Croatia image1')
         # st.image("./model_utils/Croatia_images/image5.JPG", caption='Croatia image1')
         
-        # pass
+        pass
 
     with tab2:
         show_image("./src/images/Croatia_01_image_0.tif")
