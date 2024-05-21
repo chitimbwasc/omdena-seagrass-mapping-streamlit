@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import matplotlib.pyplot as plt
 import tifffile as tiff
@@ -136,8 +137,7 @@ def gallery():
      ################### HEADER SECTION #######################
     display_image('https://cdn-images-1.medium.com/max/800/0*vBDO0wwrvAIS5e1D.png')
     
-    ################### INFORMATION SECTION #######################
-    import streamlit as st
+    ################### INFORMATION SECTION #######################  
 
     st.title("Gallery :film_frames:")
     st.markdown("*This page displays the images, masks and their predictions for Greece and Croatia regions*")
@@ -153,8 +153,6 @@ def gallery():
         
         # pass
 
-        import os
-
         # Get the current working directory
         current_directory = os.getcwd()
 
@@ -163,25 +161,14 @@ def gallery():
 
 
     with tab2:
-        # show_image("./src/images/Croatia_01_image_0.tif")
-        # show_image("./src/images/Croatia_01_image_1.tif")
-        # show_image("./src/images/Croatia_01_image_10.tif")
-        # show_image("./src/images/Croatia_01_image_100.tif")
-        # show_image("./src/images/Croatia_01_image_101.tif")
-
-        # Get the current working directory
+        
         current_directory = os.getcwd()
         folder_path = current_directory + "/src/images/"
         image_file_names = gallery_display(folder_path)
         for file_name in image_file_names:
             show_image(folder_path + file_name)
-            # st.write(folder_path + file_name)
-
-
-def gallery_display(dir_path):
             
-    import os
-
+def gallery_display(dir_path):
     # Specify the directory path
     directory_path = dir_path
 
@@ -193,8 +180,4 @@ def gallery_display(dir_path):
         for entry in entries:
             if entry.is_file():
                 file_list.append(entry.name)
-
-    # Print the list of files
-    # print("Files in directory:", file_list)
-
     return file_list
