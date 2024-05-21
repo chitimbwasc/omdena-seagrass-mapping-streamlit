@@ -126,6 +126,13 @@ def load_image(image_path, band_idxs=range(12)):
     img_arr = tiff.imread(image_path)[:, :, band_idxs]
     print(f'image {image_path} loaded')
     return img_arr
+
+def show_image(image_path, band_idxs=range(12)):
+    img_arr = tiff.imread(image_path)[:, :, band_idxs]
+    fig, ax = plt.subplots()
+    ax.plot(image)
+    # Display the image in streamlit
+    st.pyplot(fig)
             
 # Placeholder function
 def gallery():
@@ -141,11 +148,16 @@ def gallery():
     tab1, tab2 = st.tabs(['Greece','Croatia'])
 
     with tab1:
-        st.image("./images/Croatia_01_image_0.tif", caption='Greece image1')
-        st.image("./images/Croatia_01_image_1.tif", caption='Greece image1')
-        st.image("./images/Croatia_01_image_10.tif", caption='Greece image1')
-        st.image("./images/Croatia_01_image_100.tif", caption='Greece image1')
-        st.image("./images/Croatia_01_image_101.tif", caption='Greece image1')
+        # st.image("./images/Croatia_01_image_0.tif", caption='Greece image1')
+        show_image("./images/Croatia_01_image_0.tif")
+        # st.image("./images/Croatia_01_image_1.tif", caption='Greece image1
+        show_image("./images/Croatia_01_image_1.tif")
+        # st.image("./images/Croatia_01_image_10.tif", caption='Greece image1')
+        show_image("./images/Croatia_01_image_10.tif")
+        # st.image("./images/Croatia_01_image_100.tif", caption='Greece image1')
+        show_image("./images/Croatia_01_image_100.tif")
+        # st.image("./images/Croatia_01_image_101.tif", caption='Greece image1')
+        show_image("./images/Croatia_01_image_101.tif")
         # pass
 
     with tab2:
@@ -155,3 +167,25 @@ def gallery():
         # st.image("./model_utils/Croatia_images/image4.JPG", caption='Croatia image1')
         # st.image("./model_utils/Croatia_images/image5.JPG", caption='Croatia image1')
         pass
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+
+# Streamlit app
+def main(image_file):
+ 
+    if image_file is not None:
+        # Display the chosen image
+        image = load_image(image_file)
+        # plt.axis('off')
+        # fig, (ax1, ax2) = plt.subplots(1, 2)
+        # ax1.imshow(image[:, :, 3])
+        # ax2.imshow(y)
+        fig, ax = plt.subplots()
+        ax.plot(image)
+        # Display the image in streamlit
+        st.pyplot(fig)
+       
