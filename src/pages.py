@@ -149,15 +149,15 @@ def gallery():
 
     with tab1:
         # st.image("./images/Croatia_01_image_0.tif", caption='Greece image1')
-        show_image("./images/Croatia_01_image_0.tif")
+        show_image("./src/images/Croatia_01_image_0.tif")
         # st.image("./images/Croatia_01_image_1.tif", caption='Greece image1
-        show_image("./images/Croatia_01_image_1.tif")
+        show_image("./src/images/Croatia_01_image_1.tif")
         # st.image("./images/Croatia_01_image_10.tif", caption='Greece image1')
-        show_image("./images/Croatia_01_image_10.tif")
+        show_image("./src/images/Croatia_01_image_10.tif")
         # st.image("./images/Croatia_01_image_100.tif", caption='Greece image1')
-        show_image("./images/Croatia_01_image_100.tif")
+        show_image("./src/images/Croatia_01_image_100.tif")
         # st.image("./images/Croatia_01_image_101.tif", caption='Greece image1')
-        show_image("./images/Croatia_01_image_101.tif")
+        show_image("./src/images/Croatia_01_image_101.tif")
         # pass
 
     with tab2:
