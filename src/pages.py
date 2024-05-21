@@ -163,9 +163,35 @@ def gallery():
 
 
     with tab2:
-        show_image("./src/images/Croatia_01_image_0.tif")
-        show_image("./src/images/Croatia_01_image_1.tif")
-        show_image("./src/images/Croatia_01_image_10.tif")
-        show_image("./src/images/Croatia_01_image_100.tif")
-        show_image("./src/images/Croatia_01_image_101.tif")
+        # show_image("./src/images/Croatia_01_image_0.tif")
+        # show_image("./src/images/Croatia_01_image_1.tif")
+        # show_image("./src/images/Croatia_01_image_10.tif")
+        # show_image("./src/images/Croatia_01_image_100.tif")
+        # show_image("./src/images/Croatia_01_image_101.tif")
 
+        # Get the current working directory
+        current_directory = os.getcwd()
+        image_file_names = gallery_display(current_directory)
+        for file_name in image_file_names:
+            show_image(current_directory + file_name)
+
+def gallery_display(dir_path):
+            
+    import os
+
+    # Specify the directory path
+    directory_path = dir_path
+
+    # Create a list to store the file names
+    file_list = []
+
+    # Use os.scandir() to get the list of entries in the specified path
+    with os.scandir(directory_path) as entries:
+        for entry in entries:
+            if entry.is_file():
+                file_list.append(entry.name)
+
+    # Print the list of files
+    # print("Files in directory:", file_list)
+
+    return file_list
