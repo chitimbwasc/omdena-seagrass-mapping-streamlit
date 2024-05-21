@@ -172,7 +172,7 @@ def gallery():
         # Get the current working directory
         current_directory = os.getcwd()
         folder_path = current_directory + "/src/images/"
-        image_file_names = gallery_display(current_directory)
+        image_file_names = gallery_display(folder_path)
         for file_name in image_file_names:
             # show_image(current_directory + "/" + file_name)
             st.write(folder_path + file_name)
