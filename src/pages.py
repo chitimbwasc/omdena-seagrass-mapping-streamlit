@@ -130,7 +130,7 @@ def load_image(image_path, band_idxs=range(12)):
 def show_image(image_path, band_idxs=range(12)):
     img_arr = tiff.imread(image_path)[:, :, band_idxs]
     fig, ax = plt.subplots()
-    ax.plot(image)
+    ax.plot(img_arr)
     # Display the image in streamlit
     st.pyplot(fig)
             
