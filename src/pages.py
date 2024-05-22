@@ -148,18 +148,18 @@ def gallery():
     tab1, tab2 = st.tabs(['Greece','Croatia'])
 
     with tab1:
-        st.image(current_directory + "/images/Greece_images/image1.JPG", caption='Greece image1')
-        st.image(current_directory + "/images/Greece_images/image2.JPG", caption='Greece image2')
-        st.image(current_directory + "/images/Greece_images/image3.JPG", caption='Greece image3')
-        st.image(current_directory + "/images/Greece_images/image4.JPG", caption='Greece image4')
-        st.image(current_directory + "/images/Greece_images/image5.JPG", caption='Greece image5')
+        st.image(current_directory + "/src/images/Greece_images/image1.JPG", caption='Greece image1')
+        st.image(current_directory + "/src/images/Greece_images/image2.JPG", caption='Greece image2')
+        st.image(current_directory + "/src/images/Greece_images/image3.JPG", caption='Greece image3')
+        st.image(current_directory + "/src/images/Greece_images/image4.JPG", caption='Greece image4')
+        st.image(current_directory + "/src/images/Greece_images/image5.JPG", caption='Greece image5')
         
     with tab2:
-        st.image(current_directory + "/images/Croatia_images/image1.JPG", caption='Croatia image1')
-        st.image(current_directory + "/images/Croatia_images/image2.JPG", caption='Croatia image2')
-        st.image(current_directory + "/images/Croatia_images/image3.JPG", caption='Croatia image3')
-        st.image(current_directory + "/images/Croatia_images/image4.JPG", caption='Croatia image4')
-        st.image(current_directory + "/images/Croatia_images/image5.JPG", caption='Croatia image5')
+        st.image(current_directory + "/src/images/Croatia_images/image1.JPG", caption='Croatia image1')
+        st.image(current_directory + "/src/images/Croatia_images/image2.JPG", caption='Croatia image2')
+        st.image(current_directory + "/src/images/Croatia_images/image3.JPG", caption='Croatia image3')
+        st.image(current_directory + "/src/images/Croatia_images/image4.JPG", caption='Croatia image4')
+        st.image(current_directory + "/src/images/Croatia_images/image5.JPG", caption='Croatia image5')
 
 
 def gallery_display(dir_path):
