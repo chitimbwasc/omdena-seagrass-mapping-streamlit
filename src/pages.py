@@ -143,7 +143,7 @@ def gallery():
     st.markdown("*This page displays the images, masks and their predictions for Greece and Croatia regions*")
 
     # Get current working directory
-     current_directory = os.getcwd()
+    current_directory = os.getcwd()
 
     tab1, tab2 = st.tabs(['Greece','Croatia'])
 
