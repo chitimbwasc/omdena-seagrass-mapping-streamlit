@@ -142,27 +142,28 @@ def gallery():
     st.title("Gallery :film_frames:")
     st.markdown("*This page displays the images, masks and their predictions for Greece and Croatia regions*")
 
+    # Get current directory
+    current_directory = os.getcwd()
+
     tab1, tab2 = st.tabs(['Greece','Croatia'])
 
     with tab1:
-
-        current_directory = os.getcwd()
         folder_path = current_directory + "/src/images/Greece_images/"
         gallery_display(folder_path, "Greece")
-       
-
 
     with tab2:
-        
-        current_directory = os.getcwd()
-        folder_path = current_directory + "/src/images/Croatia_images/"
-        image_file_names = gallery_disp(folder_path)
-        count = 1
-        for file_name in image_file_names:
-            # show_image(folder_path + file_name)
-            cap = f" Croatia Image {count}"
-            st.image(folder_path + file_name, caption=cap)
-            count += 1
+        folder_path = current_directory + "/src/images/Greece_images/"
+        gallery_display(folder_path, "Croatia")
+                
+        # current_directory = os.getcwd()
+        # folder_path = current_directory + "/src/images/Croatia_images/"
+        # image_file_names = gallery_disp(folder_path)
+        # count = 1
+        # for file_name in image_file_names:
+            ## show_image(folder_path + file_name)
+            # cap = f" Croatia Image {count}"
+            # st.image(folder_path + file_name, caption=cap)
+            # count += 1
             
 def gallery_display(dir_path, area):
     # Specify the directory path
