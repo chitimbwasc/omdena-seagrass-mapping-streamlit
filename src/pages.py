@@ -181,7 +181,7 @@ def gallery_display(dir_path, area):
     for file_name in image_file_names:
         # show_image(folder_path + file_name)
         cap = f" {area} Image {count}"
-        st.image(folder_path + file_name, caption=cap)
+        st.image(directory_path + file_name, caption=cap)
         count += 1
 
 def gallery_disp(dir_path):
