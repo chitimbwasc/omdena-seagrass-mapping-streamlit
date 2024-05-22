@@ -164,9 +164,12 @@ def gallery():
         current_directory = os.getcwd()
         folder_path = current_directory + "/src/images/Croatia_images/"
         image_file_names = gallery_display(folder_path)
+        count = 1
         for file_name in image_file_names:
             # show_image(folder_path + file_name)
-            st.image(folder_path + file_name, caption='Croatia image5')
+            cap = f" Croatia Image {count}"
+            st.image(folder_path + file_name, caption=cap)
+            count += 1
             
 def gallery_display(dir_path):
     # Specify the directory path
