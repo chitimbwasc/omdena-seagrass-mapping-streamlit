@@ -145,33 +145,18 @@ def gallery():
     tab1, tab2 = st.tabs(['Greece','Croatia'])
 
     with tab1:
-        # st.image("./model_utils/Croatia_images/image1.JPG", caption='Croatia image1')
-        # st.image("./model_utils/Croatia_images/image2.JPG", caption='Croatia image1')
-        # st.image("./model_utils/Croatia_images/image3.JPG", caption='Croatia image1')
-        # st.image("./model_utils/Croatia_images/image4.JPG", caption='Croatia image1')
-        # st.image("./model_utils/Croatia_images/image5.JPG", caption='Croatia image1')
-        
-        # pass
 
         current_directory = os.getcwd()
         folder_path = current_directory + "/src/images/Greece_images/"
-        image_file_names = gallery_display(folder_path)
-        count = 1
-        for file_name in image_file_names:
-            # show_image(folder_path + file_name)
-            cap = f" Greece Image {count}"
-            st.image(folder_path + file_name, caption=cap)
-            count += 1
-
-        # Print the current working directory
-        # st.write("WORK  IN  PROGRESS!")
+        gallery_display(folder_path, "Greece")
+       
 
 
     with tab2:
         
         current_directory = os.getcwd()
         folder_path = current_directory + "/src/images/Croatia_images/"
-        image_file_names = gallery_display(folder_path)
+        image_file_names = gallery_disp(folder_path)
         count = 1
         for file_name in image_file_names:
             # show_image(folder_path + file_name)
@@ -179,7 +164,27 @@ def gallery():
             st.image(folder_path + file_name, caption=cap)
             count += 1
             
-def gallery_display(dir_path):
+def gallery_display(dir_path, area):
+    # Specify the directory path
+    directory_path = dir_path
+
+    # Create a list to store the file names
+    image_file_names = []
+
+    # Use os.scandir() to get the list of entries in the specified path
+    with os.scandir(directory_path) as entries:
+        for entry in entries:
+            if entry.is_file():
+                image_file_names.append(entry.name)
+    # return file_list
+    count = 1
+    for file_name in image_file_names:
+        # show_image(folder_path + file_name)
+        cap = f" {area} Image {count}"
+        st.image(folder_path + file_name, caption=cap)
+        count += 1
+
+def gallery_disp(dir_path):
     # Specify the directory path
     directory_path = dir_path
 
