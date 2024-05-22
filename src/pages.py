@@ -153,10 +153,18 @@ def gallery():
         
         # pass
 
-        
+        current_directory = os.getcwd()
+        folder_path = current_directory + "/src/images/Greece_images/"
+        image_file_names = gallery_display(folder_path)
+        count = 1
+        for file_name in image_file_names:
+            # show_image(folder_path + file_name)
+            cap = f" Greece Image {count}"
+            st.image(folder_path + file_name, caption=cap)
+            count += 1
 
         # Print the current working directory
-        st.write("WORK  IN  PROGRESS!")
+        # st.write("WORK  IN  PROGRESS!")
 
 
     with tab2:
