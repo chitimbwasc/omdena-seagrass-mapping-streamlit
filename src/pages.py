@@ -152,7 +152,7 @@ def gallery():
         gallery_display(folder_path, "Greece")
 
     with tab2:
-        folder_path = current_directory + "/src/images/Greece_images/"
+        folder_path = current_directory + "/src/images/Croatia_images/"
         gallery_display(folder_path, "Croatia")
                 
         # current_directory = os.getcwd()
