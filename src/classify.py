@@ -31,7 +31,7 @@ def main(image_file):
         #st.write("Prediction: ", prediction[1])
         #st.write("Confidence: ", prediction[2])
 
-        prediction, confindence, test = st.columns(3)
+        prediction, confindence, test, test2 = st.columns(4)
         with prediction:
             st.write("Prediction: ", y[1])
         with confindence:
@@ -39,4 +39,4 @@ def main(image_file):
         with test:
             st.write("Test: ", y[0])
 
-
+        st.test2.write("Prediction: ", y[1])
