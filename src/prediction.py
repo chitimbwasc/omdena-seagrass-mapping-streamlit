@@ -29,8 +29,8 @@ def prediction(model,image,class_names):
     # img_array = tf.expand_dims(img_array, 0)
     
     #############
-    image = load_image(image_file)
-    img_array = preprocess_image(image)
+    image_in = load_image(image)
+    img_array = preprocess_image(image_in)
     #############
     predicted_probs = model.predict(img_array)
     predicted_mask = np.argmax(predicted_probs, axis=-1)
