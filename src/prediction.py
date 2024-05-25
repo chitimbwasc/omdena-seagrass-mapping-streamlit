@@ -13,6 +13,7 @@ import tifffile
 import matplotlib.pyplot as plt
 from matplotlib import cm
 import utils_v2
+from model_utils import *
 
 @st.cache_resource
 def model_load(model_path):
@@ -21,12 +22,16 @@ def model_load(model_path):
 
 
 def prediction(model,image,class_names):
-    img_array = tf.keras.preprocessing.image.img_to_array(image)
+    # img_array = tf.keras.preprocessing.image.img_to_array(image)
     #st.write(img_array)
-    img_array = np.divide(img_array - img_array.min(), img_array.max() - img_array.min())
+    # img_array = np.divide(img_array - img_array.min(), img_array.max() - img_array.min())
     #st.write(img_array)
-    img_array = tf.expand_dims(img_array, 0)
-
+    # img_array = tf.expand_dims(img_array, 0)
+    
+    #############
+    image = load_image(image_file)
+    img_array = preprocess_image(image)
+    #############
     predicted_probs = model.predict(img_array)
     predicted_mask = np.argmax(predicted_probs, axis=-1)
     #st.write(predicted_mask)
