@@ -47,7 +47,7 @@ def display_class_confidence(y_pred, class_names):
         confidence_score = "{:.2f}%".format(confidence_score)
         st.info(f"Proportion of {class_name}: {confidence_score}")
 
-def main():
+def main_predict():
     st.title("Detecting the seagrass presence")
     st.markdown("This app is for prediction of seagrass in the mediterranean sea.")
     chosen_region = st.sidebar.selectbox("Choose the region",['','Greece','Croatia'])
@@ -112,7 +112,6 @@ def main():
     else:
         st.write("Select the region")
 
-if __name__=="__main__":
-    main()
-
+# if __name__=="__main__":
+    # main()
 
