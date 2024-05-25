@@ -12,6 +12,7 @@ import tifffile
 # from tensorflow.keras import utils
 import matplotlib.pyplot as plt
 from matplotlib import cm
+import utils_v2
 
 @st.cache_resource
 def model_load(model_path):
@@ -56,7 +57,8 @@ def main_predict():
 
     class_names = ['seagrass','water','land']
     if chosen_region == "Greece":
-        model = model_load('./saved_models/unet_cleaned_summer_V1.h5')
+        # model = model_load('./saved_models/unet_cleaned_summer_V1.h5')
+        model = utils_v2.retrieve_model()
     elif chosen_region == "Croatia":
         model = model_load('./saved_models/unet_wcc_summer_croatia.h5')
 
