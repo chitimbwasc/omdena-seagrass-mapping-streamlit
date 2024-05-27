@@ -108,7 +108,6 @@ def guide():
     display_image('https://cdn-images-1.medium.com/max/800/0*vBDO0wwrvAIS5e1D.png')
     
     ################### INFORMATION SECTION #######################
-    main_predict()
 
 # Placeholder function
 def datasets():
