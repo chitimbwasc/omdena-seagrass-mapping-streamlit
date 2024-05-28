@@ -100,7 +100,7 @@ def classify():
     display_image('https://cdn-images-1.medium.com/max/800/0*vBDO0wwrvAIS5e1D.png')
     
     img_file = st.file_uploader("Choose an image to classify", type=["tif"])
-    #main(img_file)
+    main(img_file)
 
 # Placeholder function
 def guide():
