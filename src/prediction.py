@@ -75,7 +75,8 @@ def main_predict():
     elif chosen_region == "Croatia":
         # model = model_load('./saved_models/unet_wcc_summer_croatia.h5')
         # src/models/unet_summer_images_augmented_wcc_final.h5
-        model = model_load(current_directory + '/src/models/unet_summer_images_augmented_wcc_final.h5')
+        # model = model_load(current_directory + '/src/models/unet_summer_images_augmented_wcc_final.h5')
+        model = load_model(current_directory + '/src/models/unet_summer_images_augmented_wcc_final.h5')
 
 
     if chosen_region:
