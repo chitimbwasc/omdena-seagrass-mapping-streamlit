@@ -66,6 +66,9 @@ def main_predict():
         model = utils_v2.retrieve_model()
     elif chosen_region == "Croatia":
         model = model_load('./saved_models/unet_wcc_summer_croatia.h5')
+        # src/models/unet_summer_images_augmented_wcc_final.h5
+        model = model_load('./models/unet_summer_images_augmented_wcc_final.h5')
+
 
     if chosen_region:
         if image_file is not None:
