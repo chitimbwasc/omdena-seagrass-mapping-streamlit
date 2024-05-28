@@ -32,12 +32,13 @@ def retrieve_model():
     client = MlflowClient()
     MLFLOW_TRACKING_URI = os.getenv('MLFLOW_TRACKING_URI')
     mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
-    RUN_ID = os.getenv('best_model_run_id')
+    # RUN_ID = os.getenv('best_model_run_id')
+    RUN_ID= '93bc743e3ace49a79e4ca15bcaa0a666'
     print(f'retrieving the model with run_id {RUN_ID}')
     custom_objects = {"dice_loss_plus_2focal_loss": dice_loss_plus_2focal_loss}
     with keras.saving.custom_object_scope(custom_objects):
         model = mlflow.pyfunc.load_model("runs:/" + RUN_ID + "/model")
     print(f'model with run_id {RUN_ID} retrieved')
     return model
-
+# 93bc743e3ace49a79e4ca15bcaa0a666
     
