@@ -60,6 +60,14 @@ def main_predict():
     image_file = st.file_uploader("Drop the picture of the location",type = ['tif'])
     st.markdown("Choose the region of the picture you are uploading in the sidebar.")
 
+    # Get current directory
+    current_directory = os.getcwd()
+
+
+    # with tab1:
+        # folder_path = current_directory + "/src/images/Greece_images/"
+        
+
     class_names = ['seagrass','water','land']
     if chosen_region == "Greece":
         # model = model_load('./saved_models/unet_cleaned_summer_V1.h5')
@@ -67,7 +75,7 @@ def main_predict():
     elif chosen_region == "Croatia":
         # model = model_load('./saved_models/unet_wcc_summer_croatia.h5')
         # src/models/unet_summer_images_augmented_wcc_final.h5
-        model = model_load('./models/unet_summer_images_augmented_wcc_final.h5')
+        model = model_load(current_directory + '/src/models/unet_summer_images_augmented_wcc_final.h5')
 
 
     if chosen_region:
