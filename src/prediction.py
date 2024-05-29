@@ -103,7 +103,8 @@ def main_predict():
 
             with col1:
                 st.subheader('Original Image')
-                st.image(img_array[:,:,[3,2,1]], caption="Uploaded Image", use_column_width=True)
+                # st.image(img_array[:,:,[3,2,1]], caption="Uploaded Image", use_column_width=True)
+                st.image(img_array[:,:,[2,1,0]], caption="Uploaded Image", use_column_width=True)
 
             st.sidebar.markdown("Click on the predict button below to predict the mask of the image.")
             button = st.sidebar.button("Predict")
