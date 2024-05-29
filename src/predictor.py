@@ -81,7 +81,7 @@ def preprocess_image_mask(image_arr, mask_arr):
     return image_arr_normalized.astype('float32'), mask_arr_processed.astype('float32')
 
 def set_shapes(img, mask):
-    img.set_shape([256, 256, 13])
+    img.set_shape([256, 256, 3])
     mask.set_shape([256, 256, 3])
     return img, mask
 
