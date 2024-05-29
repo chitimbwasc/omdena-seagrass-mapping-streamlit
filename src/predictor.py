@@ -121,18 +121,21 @@ def display_class_confidence(y_pred, class_names):
         confidence_score = "{:.2f}%".format(confidence_score)
         st.info(f"Proportion of {class_name}: {confidence_score}")
 
-def main():
+def main_predict():
     st.title("Detecting the seagrass presence")
     st.markdown("This app is for prediction of seagrass in the mediterranean sea.")
     chosen_region = st.sidebar.selectbox("Choose the region",['','Greece','Croatia'])
     image_file = st.file_uploader("Drop the picture of the location",type = ['tif'])
     st.markdown("Choose the region of the picture you are uploading in the sidebar.")
 
+    # Get current directory
+    current_directory = os.getcwd()
+    
     class_names = ['seagrass','water','land']
     if chosen_region == "Greece":
-        model = model_load('./saved_models/unet_cleaned_summer_V1.h5')
+        model = model_load(current_directory + '/src/models/unet_summer_images_augmented_wcc_final.h5')
     elif chosen_region == "Croatia":
-        model = model_load('./saved_models/unet_wcc_summer_croatia.h5')
+        model = model_load(current_directory + '/src/models/unet_summer_images_augmented_wcc_final.h5')
 
     if chosen_region:
         if image_file is not None:
@@ -190,7 +193,7 @@ def main():
     else:
         st.write("Select the region")
 
-if __name__=="__main__":
-    main()
+# if __name__=="__main__":
+    # main()
 
 
