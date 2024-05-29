@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import tifffile as tiff
 import numpy as np
 from classify import main
-from prediction import main_predict
+from predictor import main_predict
 
 # Utility functions
 hide_streamlit_style = """
