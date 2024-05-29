@@ -1,5 +1,5 @@
 tensorflow==2.15.0
-keras==2.15.0
+keras==3.2.1
 tifffile==2024.4.24
 mlflow==2.12.1
 cloudpickle==2.2.1
