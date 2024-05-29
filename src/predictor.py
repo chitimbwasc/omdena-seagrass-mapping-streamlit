@@ -12,7 +12,7 @@ import tifffile
 # from tensorflow.keras import utils
 import matplotlib.pyplot as plt
 from matplotlib import cm
-# import cv2
+import cv2
 from scipy import stats
 
 @st.cache_resource
