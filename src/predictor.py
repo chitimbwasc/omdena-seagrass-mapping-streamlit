@@ -171,7 +171,7 @@ def main_predict():
                 mask_arr = swm_land_mask(image, threshold=1.6)
                 image, mask = preprocess_image_mask(image, mask_arr)
                 st.write("After preprocessing",image.shape)
-                #image, mask  = set_shapes(image, mask)
+                image, mask  = set_shapes(image, mask) # JUST UNCOMMENTED
                 predicted_mask, predicted_probs = prediction(model, image, class_names)
                 predicted_mask_2d = np.squeeze(predicted_mask, axis=0)
                 cmap = plt.cm.get_cmap('viridis', 3) 
